@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Q1, Q2</h1>
+    <p class="add"></p>
+    <p class="minus"></p>
+    <p class="multiply"></p>
+    <p class="divide"></p>
+    <p class="mod"></p>
+
+    <h1>Q3</h1>
+    <p class="c1"></p>
+    <p class="c2"></p>
+    <p class="c3"></p>
+    <p class="c4"></p>
+    <p class="c5"></p>
+    <p class="c6"></p>
+    
+    <h1>Q4</h1>
+    <p class="c7"></p>
+
+    <h1 class="c8">Q5</h1>
+    <div class="q5-container"></div>
+
+    <h1>Q6</h1>
+    <p class="cel"></p>
+    <p class="fah"></p>
+
+    <h1>Q7</h1>
+
+    <h3>Shopping Cart</h3>
+    <p class="c9"></p>
+    <p class="c10"></p>
+    <p class="c11"></p>
+    <p class="c12"></p>
+    <p class="c13"></p>
+    <p class="c14"></p>
+    <p class="c15"></p>
+    <p class="c16"></p>
+    <p class="c17"></p>
+    
+    
+    <h1>Q8</h1>
+    
+    <h3>Marks Sheet</h3>
+    <p class="c18"></p>
+    <p class="c19"></p>
+    <p class="c20"></p>
+    
+    <h1>Q9</h1>
+    
+    <h3>Currency in PKR</h3>
+    <p class="c21"></p>
+
+    <h1>Q10</h1>
+    <p class="c22"></p>
+    <p class="c23"></p>
+
+
+    <h1>Q11</h1>
+    <p class="c24"></p>
+    <p class="c25"></p>
+    <p class="c26"></p>
+
+    <h1>Q12</h1>
+
+    <h3>The Geometrizer</h3>
+    <p class="c27"></p>
+    <p class="c28"></p>
+    <p class="c29"></p>
+
+
+    <h1>Q13</h1>
+
+    <h3>The Life Time Supply Calculators</h3>
+    <p class="c30"></p>
+    <p class="c31"></p>
+    <p class="c32"></p>
+    <p class="c33"></p>
+    <p class="c34"></p>
+    <script>
+        let num1 = parseInt(prompt("Enter the firsst number", 0));
+        let num2 = parseInt(prompt("Enter the second number", 0));
+        let sum = num1 + num2;
+        let diff = num1 - num2;
+        let product = num1 * num2;
+        let quotient = num1 / num2;
+        let mod = num1 % num2;
+        document.getElementsByClassName("add")[0].innerHTML = `Sum of ${num1} and ${num2} is ${sum}`;
+        document.getElementsByClassName("minus")[0].innerHTML = `Difference of ${num1} and ${num2} is ${diff}`;
+        document.getElementsByClassName("multiply")[0].innerHTML = `Product of ${num1} and ${num2} is ${product}`;
+        document.getElementsByClassName("divide")[0].innerHTML = `Quotient of ${num1} and ${num2} is ${quotient}`;
+        document.getElementsByClassName("mod")[0].innerHTML = `Modulus of ${num1} and ${num2} is ${mod}`;
+        
+        // Q3----------------------------------------------------------------------------------------------------------------------
+        let num3;
+        document.getElementsByClassName("c1")[0].innerHTML = `Value after variable declaration is "${num3}"`;
+        num3 = 10;
+        document.getElementsByClassName("c2")[0].innerHTML = `Initial value =  ${num3}`;
+        ++num3;
+        document.getElementsByClassName("c3")[0].innerHTML = `Value After increment =  ${num3}`;
+        num3 += 7;
+        document.getElementsByClassName("c4")[0].innerHTML = `Value After adding 7 =  ${num3}`;
+        --num3;
+        document.getElementsByClassName("c5")[0].innerHTML = `Value After decrement =  ${num3}`;
+        document.getElementsByClassName("c6")[0].innerHTML = `${num3} % 3 =  ${num3 % 3}`;
+        
+        // Q4--------------------------------------------------------------------------------------------------------------------
+        
+        let ticket = 600;
+        document.getElementsByClassName("c7")[0].innerHTML = `Cost of buying 5 movie ticket is: ${ticket * 5}`;
+        
+        // Q5------------------------------------------------------------------------------------------------------------------
+        const q5Container = document.getElementsByClassName("q5-container")[0];
+        for(let i = 1; i <= 10; i++){
+            const ans = document.createElement("p");
+            ans.id = "ans"+i;
+            ans.innerHTML = `5 x ${i} = ${i * 5}`;
+            q5Container.append(ans);
+        }
+
+        // Q6-------------------------------------------------------------------------------------------------------------------
+        
+        let tempCel = 30;
+        let tempFah = 100;
+        
+        let fToC = (tempFah - 32) * 5/9;
+        let cToF = (tempCel * (9/5)) + 32;
+        document.getElementsByClassName("cel")[0].innerHTML = `${tempFah} degrees Fahrenheit is ${fToC} degrees celcius`;
+        document.getElementsByClassName("fah")[0].innerHTML = `${tempCel} degrees celcius is ${cToF} degrees fahrenheit`;
+        
+        
+        // Q7-----------------------------------------------------------------------------------------------------------------
+        
+        const priceItem1 = 25.99;
+        const priceItem2 = 15.49;
+        const quantityItem1 = 3;
+        const quantityItem2 = 2;
+        const shippingCharges = 5.99;
+        
+        const totalItem1Cost = priceItem1 * quantityItem1;
+        const totalItem2Cost = priceItem2 * quantityItem2;
+        const subtotal = totalItem1Cost + totalItem2Cost;
+        const totalCost = subtotal + shippingCharges;
+
+
+        document.getElementsByClassName("c9")[0].innerHTML =`Price of Item 1: $${priceItem1}`;
+        document.getElementsByClassName("c10")[0].innerHTML =`Ordered Quantity of Item 1: ${quantityItem1}`;
+        document.getElementsByClassName("c11")[0].innerHTML =`Total Cost of Item 1: $${totalItem1Cost.toFixed(2)}`;
+        document.getElementsByClassName("c12")[0].innerHTML =`Price of Item 2: $${priceItem2}`;
+        document.getElementsByClassName("c13")[0].innerHTML =`Ordered Quantity of Item 2: ${quantityItem2}`;
+        document.getElementsByClassName("c14")[0].innerHTML =`Total Cost of Item 2: $${totalItem2Cost.toFixed(2)}`;
+        document.getElementsByClassName("c15")[0].innerHTML =`Subtotal: $${subtotal.toFixed(2)}`;
+        document.getElementsByClassName("c16")[0].innerHTML =`Shipping Charges: $${shippingCharges.toFixed(2)}`;
+        document.getElementsByClassName("c17")[0].innerHTML =`Total Cost of your order is ${totalCost}`;
+        
+        
+        // Q8-----------------------------------------------------------------------------------------------------------------
+        
+        let totalMarks = 500;
+        let MarksObtained = 450;
+        
+        let percentage = (450/500) * 100;
+        document.getElementsByClassName("c18")[0].innerHTML =`Total Marks: ${totalMarks}`;
+        document.getElementsByClassName("c19")[0].innerHTML =`Marks Obtained: ${MarksObtained}`;
+        document.getElementsByClassName("c20")[0].innerHTML =`Percentage: ${percentage}%`;
+
+        // Q9---------------------------------------------------------------------------------------------------------------------------
+        let totalCurrency = 10 * 305.00 + 81.32 * 25;
+        document.getElementsByClassName("c21")[0].innerHTML =`Total currency in PKR: Rs ${totalCurrency}`;
+        
+        // Q10---------------------------------------------------------------------------------------------------------------------------
+        let num4 = 100;
+        let result = ((100 + 5)*10)/2
+        document.getElementsByClassName("c22")[0].innerHTML =`Initial value: ${num4}`;
+        document.getElementsByClassName("c23")[0].innerHTML =`After operations: ${result}`;
+        
+        
+        // Q11---------------------------------------------------------------------------------------------------------------------------
+        
+        let currentYear = 2023;
+        let YOB = 2002;
+        let age =  currentYear - YOB;
+        document.getElementsByClassName("c24")[0].innerHTML =`Current Year: ${currentYear}`;
+        document.getElementsByClassName("c25")[0].innerHTML =`Year of Birth: ${YOB}`;
+        document.getElementsByClassName("c26")[0].innerHTML =`Age: ${age}`;
+
+        // Q12---------------------------------------------------------------------------------------------------------------------------
+
+        let radius = 50;
+        let circumference = 2 * 3.142 * radius;
+        let area = 3.142 * radius * radius;
+
+
+        document.getElementsByClassName("c27")[0].innerHTML =`Radius of the circle is: ${radius}`;
+        document.getElementsByClassName("c28")[0].innerHTML =`Circumference of the circle is: ${circumference}`;
+        document.getElementsByClassName("c29")[0].innerHTML =`Area of the circle is: ${area}`;
+        
+        
+
+        // Q13-------------------------------------------------------------------------------------------------------------------------------------
+        
+        let myFavouriteSnack = "Lays";
+        let maxAge = 63;
+        let estimatedPerDay = 5;
+        let total = (maxAge - age) * 12 * 30 * estimatedPerDay;
+        document.getElementsByClassName("c30")[0].innerHTML =`Favourite snack: ${myFavouriteSnack}`;
+        document.getElementsByClassName("c31")[0].innerHTML =`Current age: ${age}`;
+        document.getElementsByClassName("c32")[0].innerHTML =`Estimated maximum age: ${maxAge}`;
+        document.getElementsByClassName("c33")[0].innerHTML =`Amount of snacks per day: ${estimatedPerDay}`;
+        document.getElementsByClassName("c34")[0].innerHTML =`You will need ${total} Lays packs to last you until the ripe old age of ${maxAge}`;
+
+        </script>
+</body>
+</html>
